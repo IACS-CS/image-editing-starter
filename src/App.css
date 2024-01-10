@@ -1,5 +1,32 @@
 body {
-    background-color: #05053a;
-    color: #fafaff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f3f3ff;
+  color: #17171b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+figure {
+  max-width: 40vw;
+}
+figure img {
+  max-width: 100%;
+}
+nav {
+  display: flex;
+}
+nav > div {
+  display: flex;
+}
+.attribution,
+.size {
+  font-size: x-small;
+}
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.filtered-image canvas {
+  max-width: 40vw;
+}
+h1 {
+  text-align: center;
 }
