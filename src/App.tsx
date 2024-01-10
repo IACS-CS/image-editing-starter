@@ -3,7 +3,8 @@ import './App.css'
 const App = () => {
   return (
     <main>
-      Hello World
+      <h1>My Filters</h1>
+      
     </main>
   )
 }
