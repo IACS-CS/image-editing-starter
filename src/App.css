@@ -11,9 +11,13 @@ figure img {
 }
 nav {
   display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
 }
 nav > div {
   display: flex;
+  align-items: center;
 }
 .attribution,
 .size {
@@ -29,4 +33,28 @@ nav > div {
 }
 h1 {
   text-align: center;
+}
+.bar {
+  height: 64px;
+}
+.bar button {
+  margin-right: 8px;
+  padding: 8px;
+  background-color: white;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+}
+.bar button:hover {
+  background-color: #f8f8f8;
+}
+.options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.options input[type="number"] {
+  width: 3em;
 }
