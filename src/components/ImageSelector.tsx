@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import type { ImageInfo } from "../types";
 import { images } from "../images";
@@ -9,6 +9,8 @@ type Props = {
 };
 
 const ImageSelector: React.FC<Props> = ({ currentImage, onImageSelect }) => {
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
   const options = images.map((image) => ({
     value: image,
     label: image.name,
@@ -47,8 +49,23 @@ const ImageSelector: React.FC<Props> = ({ currentImage, onImageSelect }) => {
     (option) => option.value.url === currentImage.url
   );
 
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files && event.target.files[0];
+    if (file) {
+      const fileUrl = URL.createObjectURL(file);
+      const newImage = {
+        url: fileUrl,
+        name: file.name,
+        size: file.size,
+        filename: file.name,
+      };
+      setSelectedFile(file);
+      onImageSelect(newImage);
+    }
+  };
+
   return (
-    <div>
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
       <Select
         value={selectedOption}
         onChange={handleSelectChange}
@@ -57,6 +74,14 @@ const ImageSelector: React.FC<Props> = ({ currentImage, onImageSelect }) => {
         formatOptionLabel={formatOptionLabel}
         isClearable
       />
+      <div>
+        <input
+          id="file-upload"
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+        />
+      </div>
     </div>
   );
 };
