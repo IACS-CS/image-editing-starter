@@ -56,7 +56,6 @@ export type Filter<T = any> = {
 export type ImageInfo = {
   url: string;
   name: string;
-  size: number;
   filename?: string;
   attribution?: JSX.Element;
 };
