@@ -1,18 +1,36 @@
 import type { Filter } from "../../types";
-export default {
-  name: "Apply Grid",
-  apply: (pixels: Uint8ClampedArray, width: number, height: number) => {
-    /*
-     * We want to make stripes... so if we're making 10 stripes in a 200 x 300 image,
-     * We have 10 stripes wide of 20px width
-     * and we have 10 stripes tall of 30px height
-     * So if we know we're at row 44, we should know we're in stripe 4, so we need to
-     * divide by stripe width and take the modulo...
-     */
-    let nstripes = 10;
-    let stripeWidth = width / nstripes;
-    let stripeHeight = height / nstripes;
+import { hexToRGBA } from "../../util";
 
+/*
+  Define types for any options we want. To make these options available,
+  we will also have to define them in the options array below.
+*/
+type GridFilterOptions = {
+  stripes: number;
+  rowColor: string;
+  colColor: string;
+  strength: number /* percentage of color to add */;
+};
+
+/*
+  A convenience function to give a weighted average of two numbers,
+  used for our "color mixing" -- so we can add a percentage of B to A.
+*/
+const mix = (a: number, b: number, percentageB: number) => {
+  return a * (1 - percentageB) + b * percentageB;
+};
+
+const gridFilter: Filter<GridFilterOptions> = {
+  name: "Grid",
+  apply: (pixels, width, height, options) => {
+    let nstripes = options.stripes; // number of stripes
+    const [rowRed, rowGreen, rowBlue] = hexToRGBA(options.rowColor); // color to add to rows
+    const [colRed, colGreen, colBlue] = hexToRGBA(options.colColor); // color to add to columns
+    let stripeWidth = width / nstripes; // calculate width of vertical stripe
+    let stripeHeight = height / nstripes; // calculate height of horizontal stripe
+    const strength = options.strength / 100; // convert percentage to decimal
+    console.log("gridFilter got", options);
+    console.log("Row values are ", rowRed, rowGreen, rowBlue);
     // Now iterate through each row and columns...
     for (let row = 0; row < height; row++) {
       for (let col = 0; col < width; col++) {
@@ -30,19 +48,44 @@ export default {
         // Apply special logic for horizontal and vertical striping...
         if (inHorizontalStripe) {
           // make redder...
-          pixels[redIndex] += 100;
-          pixels[greenIndex] -= 50;
-          pixels[blueIndex] -= 50;
+          pixels[redIndex] = mix(pixels[redIndex], rowRed, strength);
+          pixels[greenIndex] = mix(pixels[greenIndex], rowGreen, strength);
+          pixels[blueIndex] = mix(pixels[blueIndex], rowBlue, strength);
         }
         if (inVerticalStripe) {
           // Make bluier
-          pixels[blueIndex] += 100;
-          pixels[redIndex] -= 50;
-          pixels[greenIndex] -= 50;
+          pixels[redIndex] = mix(pixels[redIndex], colRed, strength);
+          pixels[greenIndex] = mix(pixels[greenIndex], colGreen, strength);
+          pixels[blueIndex] = mix(pixels[blueIndex], colBlue, strength);
         }
       }
     }
 
     return pixels;
   },
-} as Filter;
+  options: [
+    {
+      name: "stripes",
+      type: "integer",
+      default: 10,
+      min: 2,
+    },
+    {
+      name: "rowColor",
+      type: "color",
+      default: "#ff0000",
+    },
+    {
+      name: "colColor",
+      type: "color",
+      default: "#0000ff",
+    },
+    {
+      name: "strength",
+      type: "percentage",
+      default: 15,
+    },
+  ],
+};
+
+export default gridFilter;
