@@ -1,5 +1,5 @@
 import type { Filter } from "../../types";
-import { hexToRGBA } from "../../util";
+import { hexToRGBA } from "../../utils";
 
 /*
   Define types for any options we want. To make these options available,
