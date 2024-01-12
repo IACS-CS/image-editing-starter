@@ -1,6 +1,6 @@
 # Image Editing Challenges
 
-In this assignment, you will develop a series of image filters to practice and demonstrate your understanding of image processing. Each challenge level introduces new concepts and increases in complexity. You must complete at least **one** challenge from each of the following sections.
+In this assignment, you will develop a series of image filters to practice and demonstrate your understanding of image processing. Each challenge level introduces new concepts and increases in complexity. You must complete at least **one** challenge from each of the following sections. I encourage you to try customizing the project a bit by e.g. focusing on one type of image (you could do "sky" images, or faces, or skin tones, or satellite images).
 
 ## Level 0 Challenges: Basic Pixel Adjustments
 
@@ -44,4 +44,4 @@ These challenges involve creating filters with adjustable options, adding comple
 
 This is your ultimate challenge where you can showcase your creativity and understanding.
 
-**Create Your Own Filter**: Develop a unique, artistic filter. This could be anything from a complex artistic filter to an advanced image processing effect. The filter should include multiple options to adjust its behavior and appearance.
+**Create Your Own Filter**: Develop a unique, artistic or purposeful filter. This could be anything from a complex artistic filter to an advanced image processing effect. The filter should include multiple options to adjust its behavior and appearance. You could analyze an image to pull out data, you could simplify, or you could try to take on a task such as changing the way a sky looks or enhancing people's eyes in close-ups of faces.
