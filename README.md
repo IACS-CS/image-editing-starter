@@ -9,18 +9,22 @@ Your job will be to add "filters" to our project. All of that code should be cre
 Each time you add a filter, export it from its own file and then make sure to add it to the list of filters in `src/filters/index.tsx`
 in order to make it show up in the user interface.
 
+Note: there are some template files in the `src/filters/` folder to help
+you get started.
+
 ### My First Filter
 
 To get started, let's try adding a simple "brighten" filter that brightens the image.
 
-Create a new file called `src/filters/brighten.tsx`
+Create a new file called `src/filters/brighten.tsx` -- you can do so by copying
+`src/filters/_templateVanillaFilter.tsx` to save you a little time.
 
 In that file, we will need to create our starter filter code, like so:
 
 ```typescript
 import type { Filter } from "../types"; /* Import our Filter type */
 
-const brightenFilter: Filter = {
+export const brightenFilter: Filter = {
   /* The name of our filter */
   name: "Brighten",
   /* The function that actually does the work */
@@ -29,15 +33,13 @@ const brightenFilter: Filter = {
     return pixels;
   },
 };
-
-export default brightenFilter;
 ```
 
 Then, in `src/filters/index.tsx` we need to import the filter and add it to the list of filters
 the app uses, like so...
 
 ```typescript
-import brightenFilter from './brighten';
+import {brightenFilter} from './brighten';
 
 ...
 
@@ -55,7 +57,7 @@ working with a Clamped Array, JavaScript will make sure that any numbers we prod
 ```typescript
 import type { Filter } from "../types"; /* Import our Filter type */
 
-const brightenFilter: Filter = {
+export const brightenFilter: Filter = {
   /* The name of our filter */
   name: "Brighten",
   /* The function that actually does the work */
@@ -67,8 +69,6 @@ const brightenFilter: Filter = {
     return pixels;
   },
 };
-
-export default brightenFilter;
 ```
 
 ## Working with pixels
@@ -125,7 +125,7 @@ If we need to know not just _what_ a value is (red, green, blue), but _where_ it
 
 ## Working with Options
 
-We have an infrastructure for displaying options to the user. Using this involves two parts: (1) defining the options that will be displayed to the user (2) specifying the type of options you expect your `apply` method to get back when the filter is applied.
+We have an infrastructure for displaying options to the user. Using this involves two parts: (1) defining the options that will be displayed to the user (2) specifying the type of options you expect your `apply` method to get back when the filter is applied. Take a look at [the template with options](./src/filters/_templateWithOptions.tsx) for some starter code.
 
 You can see a good example of this in the [grid](./src/filters/samples/grid.tsx) sample filter.
 
