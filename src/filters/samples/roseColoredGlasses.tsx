@@ -13,7 +13,7 @@ export default {
       if (isRed) {
         pixels[i] = pixels[i] + 100;
       } else if (!isAlpha) {
-        pixels[i] = pixels[i] + 30;
+        pixels[i] = pixels[i] - 30;
       }
     }
     return pixels;
