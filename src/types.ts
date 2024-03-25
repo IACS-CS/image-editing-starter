@@ -1,3 +1,7 @@
+/**
+ * This starter code was provided by my teacher
+ */
+
 export type FilterOptionValue = {
   name: string;
   value: number | boolean | string;

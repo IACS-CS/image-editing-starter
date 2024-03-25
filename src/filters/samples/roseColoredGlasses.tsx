@@ -1,3 +1,8 @@
+/**
+ * Sample filter provided by teacher
+ */
+
+
 import type { Filter } from "../../types";
 export default {
   name: "Rose Colored Glasses",

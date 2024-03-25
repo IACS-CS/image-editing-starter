@@ -1,3 +1,7 @@
+/**
+ * Sample filter provided by teacher
+ */
+
 import type { Filter } from "../../types";
 import { hexToRGBA } from "../../utils";
 

@@ -1,3 +1,7 @@
+/**
+ * This starter code was provided by my teacher
+ */
+
 /* Take a 6 or 8 digit hex code and convert it into an RGBA string */
 export const hexToRGBA: (hex: string) => [number, number, number, number] = (
   hex

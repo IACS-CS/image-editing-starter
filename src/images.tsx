@@ -1,5 +1,11 @@
 import type { ImageInfo } from "./types";
 
+/**
+ * This starter code was provided by my teacher:
+ * Modify the list below to add new photos to the list
+ * or remove old photos.
+ */
+
 export const images: ImageInfo[] = [
   {
     filename: "The_European_Extremely_Large_Telescope.jpg",
