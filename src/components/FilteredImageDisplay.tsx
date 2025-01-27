@@ -1,3 +1,8 @@
+/* 
+* Students: you shouldn't need to modify this file.
+* Go to: 
+*/
+
 import React, { useEffect, useRef, useState } from "react";
 import type { Filter, ImageInfo } from "../types";
 

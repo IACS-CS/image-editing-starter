@@ -1,16 +1,14 @@
 /**
- * This starter code for image editing work was authored by
- * Tom Hinkle (https://www.tomhinkle.net) and is provided as is
- * for use by any students or teachers interested in doing basic
- * image filtering with TypeScript.
- *
- * This starter code was provided by my teacher.
  *
  * Note: This template is designed so that student work will be added to
  * src/filters/index.tsx
  *
- * Students also may want to add additional images to src/images.tsx
- * (and add the images themselves to public/images/).
+ * Students: you should most likely not be touching this file.
+ *
+ * To add filters: go to src/filters/
+ *
+ * To add images: go to src/images.tsx
+ *
  */
 
 import { useEffect, useState } from "react";
