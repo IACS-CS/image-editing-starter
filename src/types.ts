@@ -46,14 +46,16 @@ export type FilterOption =
   | FilterOptionBoolean
   | FilterOptionInteger;
 
+export type FilterFunction<T = any> = (
+  pixels: Uint8ClampedArray,
+  width: number,
+  height: number,
+  options: T
+) => Uint8ClampedArray;
+
 export type Filter<T = any> = {
   name: string;
-  apply: (
-    pixels: Uint8ClampedArray,
-    width: number,
-    height: number,
-    options: T
-  ) => Uint8ClampedArray;
+  apply: FilterFunction<T>;
   options?: FilterOption[];
 };
 
@@ -61,5 +63,6 @@ export type ImageInfo = {
   url: string;
   name: string;
   filename?: string;
-  attribution?: JSX.Element;
+  attribution?: string;
+  sourceLink?: string;
 };
