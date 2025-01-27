@@ -21,6 +21,7 @@
         "vite": "^3.0.4"
     },
     "dependencies": {
-        "react-select": "^5.8.0"
+        "react-select": "^5.8.0",
+        "ts-migrate": "^0.1.35"
     }
 }
