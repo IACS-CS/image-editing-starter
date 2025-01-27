@@ -1,11 +1,17 @@
 import type { Filter } from "../types";
-import sampleRoseColoredGlasses from "./samples/roseColoredGlasses";
-import sampleGrid from "./samples/grid";
-import sampleVignette from "./samples/vignette";
+import { challengeZero } from "./challenge0";
+import { challengeOneFilter } from "./challenge1";
+import { challengeTwoFilter } from "./challenge2";
+import { challengeThreeFilter } from "./challenge3";
+import { ultimateChallenge } from "./challenge4";
+
+
 const filters: Filter[] = [
-  sampleRoseColoredGlasses,
-  sampleGrid,
-  sampleVignette,
+  challengeZero,
+  challengeOneFilter,
+  challengeTwoFilter,
+  challengeThreeFilter,
+  ultimateChallenge
 ];
 
 export default filters;
