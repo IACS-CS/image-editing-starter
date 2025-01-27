@@ -10,7 +10,8 @@
  * in order to implement new image filters WITH OPTIONS.
  */
 
-import type { Filter } from "../types";
+import { booleanOption, colorOption, percentageOption } from "../filterOptions";
+import type { Filter, FilterOption, FilterFunction } from "../types";
 import { hexToRGBA } from "../utils";
 
 type MyFilterOptions = {
@@ -22,36 +23,29 @@ type MyFilterOptions = {
   strength: number;
   darkMode: boolean;
 };
+
+const filterOptions: FilterOption[] = [
+  colorOption("overlayColor", "#ff0000"),
+  percentageOption("strength", 0.5),
+  booleanOption("darkMode", false),
+];
+
+const filterImage: FilterFunction<MyFilterOptions> = (
+  pixels,
+  width,
+  height,
+  options: MyFilterOptions
+) => {
+  if (options.darkMode) {
+    // do something if we're in dark mode...
+  } else {
+    // do something else if we're not in dark mode...
+  }
+  return pixels;
+};
+
 export const myFilter: Filter<MyFilterOptions> = {
   name: "My Filter",
-  apply: (pixels, width, height, options) => {
-    // We can now access our options with
-    // e.g. options.color, options.strength, etc.
-
-    // Note that "color" options give you a string (e.g. a hex code)
-    // and our utils library has a convenience function to convert
-    // from RGB (or RGBA) hex codes into an array of numbers (0-255)
-    const [r, g, b, a] = hexToRGBA(options.color);
-    /* Modify pixels... */
-    return pixels;
-  },
-  options: [
-    {
-      name: "color",
-      type: "color",
-      default: "#ff0000",
-    },
-    {
-      name: "strength",
-      type: "number",
-      default: 50,
-      min: 0,
-      max: 1000,
-    },
-    {
-      name: "darkMode",
-      type: "boolean",
-      default: false,
-    },
-  ],
+  apply: filterImage,
+  options: filterOptions,
 };
