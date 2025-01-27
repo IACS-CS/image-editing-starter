@@ -1,4 +1,4 @@
-import type { Filter, FilterFunction } from "../types";
+import type { Filter, FilterFunction, FilterOption } from "../types";
 
 const RED = 0;
 const GREEN = 1;
@@ -18,7 +18,8 @@ These challenges involve simple adjustments in pixel values. They are designed t
 */
 
 const filterImage: FilterFunction = (pixels, width, height) => {
-  /* Modify pixels... */  
+  /* Modify pixels... */
+
   for (let row = 0; row < height; row++) {
     for (let col = 0; col < width; col++) {
       for (let channel = 0; channel < 3; channel++) {
