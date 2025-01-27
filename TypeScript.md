@@ -2,10 +2,9 @@
 
 TypeScript is designed to help programmers know what types of data they're working with. That way when you're working with an argument, a return value, or a variable, your editor can give you good hints and warn you if you make mistakes, like trying to treat strings as numbers or forgetting that something is an array.
 
-For this project, there are some type hints which help the editor remind you what
-pixels, width, height, etc. are. For the most part, the typescript is entirely on
-code you won't be touching, so you don't have to care about it, but here's how it 
-works.
+For this project, there are some type hints which help the editor remind you what pixels, width, height, etc. are. 
+
+For the most part, the TypeScript code is already written for you and won’t require changes. However, here’s a quick overview of how it works to help you understand the provided type hints.
 
 ## Normal JavaScript
 ```js

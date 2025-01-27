@@ -7,8 +7,9 @@ Read about [TypeScript](./TypeScript.md) here.
 
 ## Adding Filters
 
-Your job will be to add "filters" to our project. All of that code should be created in the `src/filters` subdirectory. There are files for each challenge
-already set up for you: challenge0, challenge1, challenge2, etc.
+Your job will be to add "filters" to our project. 
+
+All your filter code should go in the src/filters subdirectory. Files for each challenge (e.g., challenge0, challenge1, challenge2) have already been set up for you.
 
 (Note: if you want to make more filters than there are challenges, you can add
 your own import statements to src/filters/index.tsx and you can copy the
