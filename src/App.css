@@ -37,15 +37,23 @@ h1 {
 .bar {
   height: 64px;
 }
-.bar button {
+
+input[type="file"] {
+  padding: 8px;
+}
+
+.bar button,
+input[type="file"]::-webkit-file-upload-button {
   margin-right: 8px;
   padding: 8px;
   background-color: white;
   color: #222;
   border: none;
   border-radius: 8px;
+  filter: drop-shadow(2px 2px 4px #0005);
 }
-.bar button:hover {
+.bar button:hover,
+input[type="file"]::-webkit-file-upload-button:hover {
   background-color: #f8f8f8;
 }
 .options {
