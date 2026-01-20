@@ -3,7 +3,8 @@
 A starter template for students working on a simple set of "Image Editing" code in a functional environment! Read over this "how to" guide to get started, then work your way through the [Challenges](./CHALLENGES.md).
 
 Note: this project is written in TypeScript, which is a super-set of JavaScript.
-Read about [TypeScript](./TypeScript.md) here.
+Read about [TypeScript](./TypeScript.md) here. This project also uses React for the user interface; React is a framework that lets you mix HTML-like mark-up with JavaScript or TypeScript; developed by Facebook, it is the most popular framework for building web applications. You can *mostly* ignore React while you work on this project, but if you see funny looking code in 
+App.tsx, that's what it is :)
 
 ## Adding Filters
 

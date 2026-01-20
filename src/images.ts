@@ -15,6 +15,15 @@ export const images: ImageInfo[] = [
     name: "Kolkata Home Cooking",
   },
   {
+    filename: "harvest_scene_in_the_delaware_valley_2002.jpg",
+    url: "images/harvest_scene_in_the_delaware_valley_2002.jpg",
+    attribution:
+      "George Inness, 1867 - Image in Public Domain, National Gallery of Art, Washington, DC",
+    sourceLink:
+      "https://www.nga.gov/artworks/125748-harvest-scene-delaware-valley.html",
+    name: "Harvest Scene in the Delaware Valley",
+  },
+  {
     filename: "The_European_Extremely_Large_Telescope.jpg",
     url: "images/The_European_Extremely_Large_Telescope.jpg",
     attribution: "By ESO - CC BY 4.0",
