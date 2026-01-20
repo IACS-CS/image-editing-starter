@@ -18,17 +18,14 @@ const filterImage: FilterFunction = (pixels, width, height) => {
 
   for (let row = 0; row < height; row++) {
     for (let col = 0; col < width; col++) {
-      for (let channel = 0; channel < 3; channel++) {
-        const redIndex = row * 4 * width + col * 4 + channel;
-        const greenIndex = redIndex + 1;
-        const blueIndex = redIndex + 2;
-        
-        // Now we can do something with the value...
-        // e.g. increase each pixel by 40...
-        // pixels[redIndex] = pixels[redIndex] + 40;
-        // OR we can increase each pixel by a random amount...
-        // pixels[blueIndex] = pixels[blueIndex] + Math.random() * 30; //
-      }
+      const redIndex = row * 4 * width + col * 4;
+      const greenIndex = redIndex + 1;
+      const blueIndex = redIndex + 2;
+      // Now we can do something with the value...
+      // e.g. increase each pixel by 40...
+      // pixels[redIndex] = pixels[redIndex] + 40;
+      // OR we can increase each pixel by a random amount...
+      // pixels[blueIndex] = pixels[blueIndex] + Math.random() * 30; //
     }
   }
   return pixels;
