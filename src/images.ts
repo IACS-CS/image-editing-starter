@@ -8,6 +8,15 @@ import type { ImageInfo } from "./types";
 
 export const images: ImageInfo[] = [
   {
+    filename:
+      "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436163/801326/main-image",
+    url: "images/degas.jpg",
+    attribution:
+      "Three Dancers Preparing for Class - Edgar Degas - Public Domain. Metropolitan Museum of Art",
+    sourceLink: "https://www.metmuseum.org/art/collection/search/436163",
+    name: "Three Dancers Preparing for Class",
+  },
+  {
     filename: "Pabda_Jhaal_-_Home-_Kolkata_-_West_Bengal.jpg",
     url: "images/Pabda_Jhaal_-_Home-_Kolkata_-_West_Bengal.jpg", // in /public/images/ folder...
     attribution: "By Nilanjan Sasmal - CC BY-SA 4.0",
