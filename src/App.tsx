@@ -75,7 +75,8 @@ const App = () => {
           filter.options &&
           filter.options.map((option) => (
             <FilterOptionComponent
-              currentValue={filterOptions[option.name]}
+              key={option.name}
+              currentValue={filterOptions[option.name] ?? option.default}
               option={option}
               onInput={setFilterOption}
             />
