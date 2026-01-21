@@ -35,6 +35,6 @@ const filterImage: FilterFunction = (pixels, width, height) => {
 };
 
 export const challengeTwoFilter: Filter = {
-  name: "Challenge #1",
+  name: "Challenge #2",
   apply: filterImage,
 };
