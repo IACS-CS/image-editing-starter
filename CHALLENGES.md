@@ -19,7 +19,7 @@ These challenges involve simple adjustments to pixel values. They are designed t
 These challenges introduce conditional logic to your filters. Each of these requires using an **if** statement to treat pixels differently depending on their color, brightness, or position.
 
 1. **Threshold Filter**: Implement a filter that sets all pixels to either black or white, depending on a brightness threshold.
-2. **Sepia Tone**: Apply a sepia effect to give the image a warm, brownish tone (you'll need to clamp values that exceed 255).
+2. **Sepia Tone**: Apply a sepia effect to give the image a warm, brownish tone. This requires computing new values from a weighted mix of all three color channels.
 3. **Posterize**: Create a filter that replaces all pixels with colors from a fixed
    palette based on proximity, creating the equivalent of e.g. a "4 color" poster.
 4. **Warm/Cool Split**: Make dark pixels warmer (shift toward red/orange) and bright pixels cooler (shift toward blue).
