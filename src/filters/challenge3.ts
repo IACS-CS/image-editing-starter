@@ -5,6 +5,12 @@
  * allow the user to set a threshold for a threshold filter, or
  * a color for a color filter. You could also allow the user to
  * set a strength for a blur filter, or a color for a sepia filter.
+ *
+ * Other ideas:
+ * - Adjustable Noise: let the user control noise intensity and
+ *   whether noise affects all channels equally or independently.
+ * - Adjustable Brighten/Darken with a slider for the amount.
+ * - Posterize with a selectable number of colors.
  */
 
 import { percentageOption } from "../filterOptions";
@@ -12,10 +18,8 @@ import type { Filter, FilterOption, FilterFunction } from "../types";
 import { hexToRGBA } from "../utils";
 
 type MyFilterOptions = {
-  /* Define options here, as we will get them
-  in our apply function -- this needs to match
-  the list of options provided below. I'll provide
-  three example options to show one of each type */
+  /* Define options here -- this needs to match
+  the list of options provided below */
   // e.g.
   // strength: number
 };

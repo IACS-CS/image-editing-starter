@@ -1,6 +1,6 @@
-# Hello World
+# A Brief Intro to React
 
-This is a chance for you to start learning react.
+This is a chance for you to start learning React.
 
 Key concepts:
 
@@ -36,12 +36,12 @@ There are a few special rules for HTML in React:
     1. `class=` in HTML becomes `className=` in JSX
     2. `for=` in HTML becomes `htmlFor=` in JSX
 4. React handles inline styles as objects rather than strings.
-  `style="background-color:blue" in HTML becomes `style=  {{backgroundColor:'blue'}} in JSX.
+  `style="background-color:blue"` in HTML becomes `style={{backgroundColor:'blue'}}` in JSX.
 5. React prefers camelCase...
-  1. onclick="somefunction" in HTML becomes `onClick={someFunction}` in JSX
-  2. tabindex becomes tabIndex
-  3. readonly becomes readOnly
-4. Comments are written with JS comments in brackets
+  1. `onclick="somefunction"` in HTML becomes `onClick={someFunction}` in JSX
+  2. `tabindex` becomes `tabIndex`
+  3. `readonly` becomes `readOnly`
+6. Comments are written with JS comments in brackets
   {/* Comment here */}
 
 Here are some more examples of JSX:
@@ -49,10 +49,10 @@ Here are some more examples of JSX:
 ```jsx
 let name = 'Tom'
 let tomsHead = <h1>This Page Belongs to {name}</h1>
-let tomsIntro = <div>{tomsHead}<nav><p>All about me</p></div>
+let tomsIntro = <div>{tomsHead}<p>All about me</p></div>
 ```
 
-In practice, developers often put parentheses around JSX for clarity and simplicty:
+In practice, developers often put parentheses around JSX for clarity and simplicity:
 ```jsx
 let tomsIntro = (
   <div>
@@ -114,7 +114,7 @@ const head = (text) => (<h1>{text}</h1>);
 
 ## Components
 
-In React, a *Component* is just a function that return markup. By convention, components have capitalized names.
+In React, a *Component* is just a function that returns markup. By convention, components have capitalized names.
 
 In markup in JSX, you can *insert* a component by treating it like a tag.
 

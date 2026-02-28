@@ -3,14 +3,17 @@ import type { Filter, FilterFunction, FilterOption } from "../types";
 /*
 For your first challenge choose one of the below...
 
-These challenges involve simple adjustments in pixel values. They are designed to get you familiar with manipulating pixel data.
+These challenges involve simple adjustments to pixel values. They are
+designed to get you familiar with manipulating pixel data. Each of these
+can be done by changing every pixel without any conditional logic.
 
 1. **Brighten Filter**: Increase the brightness of an image by adding a fixed value to each color channel.
 2. **Darken Filter**: Decrease the brightness of an image by subtracting a fixed value from each color channel.
-3. **Noise Filter**: Add random values to pixel values to change the image.
-4. **Posterize Filter**: Reduce the color complexity of the image by rounding all numbers to fixed values.
-   For example, to make a poster that has only 8 colors, you would want to round each channel value to one of 2
-   possible values (i.e. either round it up to 255 or down to 0).
+3. **Grayscale Filter**: Convert the image to grayscale using the average method (set each channel to the average of R, G, and B).
+4. **Noise Filter**: Add random noise to the image by adding a random value to each color channel.
+5. **Color Tint**: Give the image a color cast by adding a fixed value to one or two channels (e.g., add to red for a warm tint, add to blue for a cool tint).
+6. **Increase Contrast**: Push each color value away from the middle (128) to make bright pixels brighter and dark pixels darker.
+7. **Invert Colors**: Create a "negative" of the image by replacing each channel value with 255 minus the original value.
 */
 
 const filterImage: FilterFunction = (pixels, width, height) => {
