@@ -1,13 +1,17 @@
 /** 
  * These challenges introduce conditional logic to your filters.
+ * Each of these requires using an *if* statement to treat pixels
+ * differently depending on their color, brightness, or position.
  * e.g.
  * 1. **Threshold Filter**: Implement a filter that sets all pixels to either black or white, depending on a brightness threshold.
- * 2. **Invert Colors**: Create a filter that inverts the colors of the image.
- * 3. **Sepia Tone**: Apply a sepia effect to give the image a warm, brownish tone.
- * 4. **Posterize**: Create a filter that replaces all pixels with colors from a fixed
-   palette based on proximity, creating the equivalent of e.g. a "4 color" poster. 
-   
-   */
+ * 2. **Sepia Tone**: Apply a sepia effect to give the image a warm, brownish tone (you'll need to clamp values that exceed 255).
+ * 3. **Posterize**: Create a filter that replaces all pixels with colors from a fixed
+ *    palette based on proximity, creating the equivalent of e.g. a "4 color" poster.
+ * 4. **Warm/Cool Split**: Make dark pixels warmer (shift toward red/orange) and bright pixels cooler (shift toward blue).
+ * 5. **Conditional Noise**: Add noise only to certain pixels—for example, only to dark areas or only to pixels in the top half of the image.
+ * 6. **Color Channel Swap**: Swap color channels (e.g., swap red and blue) but only for pixels that meet some condition (e.g., above a brightness threshold).
+ * 7. **Red-eye Reduction**: Detect pixels that are very red compared to their green and blue values and desaturate them.
+ */
 
 import { percentageOption } from "../filterOptions";
 import type { Filter, FilterOption, FilterFunction } from "../types";

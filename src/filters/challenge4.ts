@@ -5,6 +5,12 @@
  * For example, you could try to make a filter that makes sunset pictures
  * look more dramatic, or a filter that makes black and white images look
  * like they were taken with an old camera.
+ *
+ * More ideas:
+ * - Enhance skin tones in portrait photos.
+ * - Make a "tilt-shift" effect that blurs the top and bottom to mimic a miniature scene.
+ * - Detect and highlight a specific color range (e.g., make everything grayscale except red objects).
+ * - Create a pixel-art downscaler that averages blocks of pixels.
  */
 
 import { percentageOption } from "../filterOptions";

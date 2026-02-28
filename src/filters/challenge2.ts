@@ -17,7 +17,9 @@ Choices:
 - Edge Detection
 - Blur
 - Make a border whose color is the average color of the image.
-- Black & White filter with a cut-off based on brightness of the image.
+- Black & White filter with a cut-off based on the average brightness of the image.
+- Color Palette Extraction: reduce the image to a small set of the most common colors.
+- Sharpen: emphasize differences between neighboring pixels to make edges crisper.
 
    */
 
