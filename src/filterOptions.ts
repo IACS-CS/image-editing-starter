@@ -4,6 +4,7 @@ import type {
   FilterOptionNumber,
   FilterOptionInteger,
   FilterOptionPercentage,
+  FilterOptionRange,
 } from "./types";
 
 export const percentageOption = (
@@ -56,4 +57,19 @@ export const integerOption = (
   type: "integer",
   min,
   max,
+});
+
+export const rangeOption = (
+  name: string,
+  defaultVal: number,
+  min: number,
+  max: number,
+  step?: number
+): FilterOptionRange => ({
+  name,
+  default: defaultVal,
+  type: "range",
+  min,
+  max,
+  step,
 });

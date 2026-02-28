@@ -39,12 +39,22 @@ export type FilterOptionInteger = {
   max?: number;
 };
 
+export type FilterOptionRange = {
+  name: string;
+  default: number;
+  type: "range";
+  min: number;
+  max: number;
+  step?: number;
+};
+
 export type FilterOption =
   | FilterOptionPercentage
   | FilterOptionNumber
   | FilterOptionColor
   | FilterOptionBoolean
-  | FilterOptionInteger;
+  | FilterOptionInteger
+  | FilterOptionRange;
 
 export type FilterFunction<T = any> = (
   pixels: Uint8ClampedArray,

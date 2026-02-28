@@ -53,8 +53,23 @@ const FilterOptionComponent: React.FC<FilterOptionProps> = ({
             name={option.name}
             value={currentValue as number}
             min="0"
-            max="100"
-            step=".1"
+            max="1"
+            step="0.01"
+            onChange={handleChange}
+          />
+        </label>
+      );
+    case "range":
+      return (
+        <label>
+          {option.name}:
+          <input
+            type="range"
+            name={option.name}
+            value={currentValue as number}
+            min={option.min}
+            max={option.max}
+            step={option.step ?? "any"}
             onChange={handleChange}
           />
         </label>
