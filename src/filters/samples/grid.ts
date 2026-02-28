@@ -25,7 +25,7 @@ let gridOptions: FilterOption[] = [
   integerOption("stripes", 10, 2),
   colorOption("rowColor", "#ff0000"),
   colorOption("colColor", "#0000ff"),
-  percentageOption("strength", 15),
+  percentageOption("strength", 0.15),
 ];
 
 /*
@@ -47,7 +47,7 @@ const applyGrid: FilterFunction<GridFilterOptions> = (
   const [colRed, colGreen, colBlue] = hexToRGBA(options.colColor); // color to add to columns
   let stripeWidth = width / nstripes; // calculate width of vertical stripe
   let stripeHeight = height / nstripes; // calculate height of horizontal stripe
-  const strength = options.strength / 100; // convert percentage to decimal
+  const strength = options.strength; // percentage as decimal (0-1)
   // Now iterate through each row and columns...
   for (let row = 0; row < height; row++) {
     for (let col = 0; col < width; col++) {
