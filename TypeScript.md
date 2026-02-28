@@ -36,11 +36,11 @@ type MyFilterOptions = {
 
 What that says is: an object of type `MyFilterOptions` will have a `strength` 
 and a `color` property. If you then give this hint to the `FilterFunction` type
-by writing, you will get good autocomplete and error correction when using 
+as shown below, you will get good autocomplete and error correction when using 
 options.
 
 ```ts
 const filterImage : FilterFunction<MyFilterOptions> = (pixels, w, h, options) => {...}
 ```
 This is especially helpful if you start writing a complex function with multiple 
-options. See the [grid](./src/filters/samples/grid.tsx) for an example.
+options. See the [grid](./src/filters/samples/grid.ts) for an example.

@@ -7,10 +7,7 @@ These challenges involve simple adjustments in pixel values. They are designed t
 
 1. **Brighten Filter**: Increase the brightness of an image by adding a fixed value to each color channel.
 2. **Darken Filter**: Decrease the brightness of an image by subtracting a fixed value from each color channel.
-3. **Noise Filter**: Add random values to pixel values to change the image.
-4. **Posterize Filter**: Reduce the color complexity of the image by rounding all numbers to fixed values.
-   For example, to make a poster that has only 8 colors, you would want to round each channel value to one of 2
-   possible values (i.e. either round it up to 255 or down to 0).
+3. **Grayscale Filter**: Convert the image to grayscale using the average method.
 */
 
 const filterImage: FilterFunction = (pixels, width, height) => {
